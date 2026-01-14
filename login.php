@@ -16,10 +16,7 @@
 <?php
 session_start();
 include "db.php";
-
-function sanitize($data) {
-    return htmlspecialchars(trim($data), ENT_QUOTES, 'UTF-8');
-}
+include "util.php";
 
 if($_SERVER["REQUEST_METHOD"]=="POST"){
     $email = sanitize($_POST['email']);
